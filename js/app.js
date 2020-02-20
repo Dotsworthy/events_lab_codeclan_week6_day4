@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const form = document.querySelector('#new-item-form');
   form.addEventListener('submit', handleForm)
+
+  const deleteAll = document.querySelector('#reset');
+  deleteAll.addEventListener('click', handleButtonClick)
 })
 
 const handleForm = function() {
@@ -15,3 +18,8 @@ const handleForm = function() {
 
   document.querySelector('#new-item-form').reset();
 };
+
+const handleButtonClick = function() {
+  const resultSubmit = document.querySelector('#reading-list');
+  document.querySelector('#reading-list').innerHTML = '';
+}
